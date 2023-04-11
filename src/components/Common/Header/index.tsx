@@ -1,6 +1,13 @@
-import { AlermIcon, ApplyIcon, DarkMode, Logo, LightMode, ProfileIcon, SearchIcon } from 'assets/svg';
+import {
+  AlermIcon,
+  ApplyIcon,
+  DarkMode,
+  Logo,
+  LightMode,
+  ProfileIcon,
+  SearchIcon,
+} from 'assets/svg';
 import * as S from './style';
-import Image from 'next/image';
 import { useState } from 'react';
 
 const Header = () => {
@@ -9,6 +16,7 @@ const Header = () => {
   return (
     <>
       <S.Wrap>
+        <S.Line />
         <Logo />
         <S.Container>
           <S.Logo>
@@ -28,9 +36,7 @@ const Header = () => {
           left={toggle}
           background={toggle}
         >
-          <span>
-            {toggle ? <DarkMode /> : <LightMode />}
-          </span>
+          <span>{toggle ? <DarkMode /> : <LightMode />}</span>
         </S.ModeSwitch>
       </S.Wrap>
     </>
