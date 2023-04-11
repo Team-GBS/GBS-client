@@ -5,5 +5,6 @@ export const MainTemplates = styled.div`
   height: 100vh;
   background: #ffffff;
   display: flex;
+  flex-direction: column;
   margin: auto;
 `;
