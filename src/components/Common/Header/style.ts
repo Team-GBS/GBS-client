@@ -39,14 +39,14 @@ export const ModeSwitch = styled.label<{left: boolean, background: boolean}>`
     display: block;
     position: relative;
     border-radius: 30px;
-    background-color: ${(props) => props.background === false ? '#e2e2e2' : '#656B80'};
+    background-color: ${(props) => !props.background ? '#e2e2e2' : '#656B80'};
     cursor: pointer;
     span {
         width: 27px;
         height: 27px;
         position: absolute;
         top: 50%;
-        left: ${(props) => props.left === false ? '4px' : 'calc(100% - 31px)'};
+        left: ${(props) => !props.left ? '4px' : 'calc(100% - 31px)'};
         transform: translateY(-50%);
         border-radius: 50%;
         background: #fff;
