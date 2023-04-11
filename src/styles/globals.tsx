@@ -102,6 +102,10 @@ const style = css`
     cursor: pointer;
     outline: none;
   }
+  svg {
+    user-select: none;
+    cursor: pointer;
+  }
 `;
 
 const GlobalStyle = () => {
