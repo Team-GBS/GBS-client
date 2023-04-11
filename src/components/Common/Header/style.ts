@@ -2,12 +2,12 @@ import styled from '@emotion/styled';
 
 export const Wrap = styled.div`
   width: 100%;
-  /* border-bottom: 1px solid #eaeaea; */
   height: 75px;
   display: flex;
   align-items: center;
   gap: 20px;
   position: relative;
+  justify-content: space-between;
 `;
 
 export const Line = styled.div`
@@ -20,15 +20,16 @@ export const Line = styled.div`
 `;
 
 export const Container = styled.div`
-  width: 100%;
   height: 100%;
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  gap: 30px;
 `;
 
 export const Logo = styled.div`
   display: flex;
+  align-items: center;
+  gap: 7px;
 `;
 
 export const GBSLogo = styled.div`
@@ -36,26 +37,20 @@ export const GBSLogo = styled.div`
   font-weight: 700;
 `;
 
-export const Navbar = styled.div`
-  gap: 30px;
-  display: flex;
-`;
-
 export const ModeSwitch = styled.label<{ left: boolean; background: boolean }>`
-  width: 85px;
-  margin-left: 30px;
-  height: 35px;
+  width: 100px;
+  height: 50px;
   display: block;
   position: relative;
-  border-radius: 30px;
+  border-radius: 50px;
   background-color: ${(props) => (!props.background ? '#e2e2e2' : '#656B80')};
   cursor: pointer;
   span {
-    width: 27px;
-    height: 27px;
+    width: 42px;
+    height: 42px;
     position: absolute;
     top: 50%;
-    left: ${(props) => (!props.left ? '4px' : 'calc(100% - 31px)')};
+    left: ${(props) => (!props.left ? '4px' : 'calc(100% - 46px)')};
     transform: translateY(-50%);
     border-radius: 50%;
     background: #fff;

@@ -17,19 +17,16 @@ const Header = () => {
     <>
       <S.Wrap>
         <S.Line />
-        <Logo />
+        <S.Logo>
+          <Logo />
+          <S.GBSLogo>GBS</S.GBSLogo>
+        </S.Logo>
         <S.Container>
-          <S.Logo>
-            <S.GBSLogo>GBS</S.GBSLogo>
-          </S.Logo>
-          <S.Navbar>
-            <SearchIcon />
-            <AlermIcon />
-            <ProfileIcon />
-            <ApplyIcon />
-          </S.Navbar>
-        </S.Container>
-        <S.ModeSwitch
+          <SearchIcon />
+          <AlermIcon />
+          <ProfileIcon />
+          <ApplyIcon />
+          <S.ModeSwitch
           onClick={() => {
             setToggle(!toggle);
           }}
@@ -38,6 +35,7 @@ const Header = () => {
         >
           <span>{toggle ? <DarkMode /> : <LightMode />}</span>
         </S.ModeSwitch>
+        </S.Container>
       </S.Wrap>
     </>
   );
