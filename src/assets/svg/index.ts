@@ -8,3 +8,4 @@ export { default as ApplyIcon } from './ApplyIcon';
 export { default as Logo } from './Logo';
 export { default as LightMode } from './LightMode';
 export { default as DarkMode } from './DarkMode';
+export { default as BookIcon } from './BookIcon';
