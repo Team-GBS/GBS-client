@@ -25,7 +25,7 @@ const Header = () => {
           onClick={() => {
             setToggle(!toggle);
           }}
-          left={toggle === false ? '4px' : '36px'}
+          left={toggle === false ? '4px' : 'calc(100% - 31px)'}
           background={toggle === false ? '#e2e2e2' : '#656B80'}
         >
           <span>

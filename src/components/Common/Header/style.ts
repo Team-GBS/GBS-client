@@ -1,13 +1,13 @@
 import styled from "@emotion/styled";
 
 export const Wrap = styled.div`
-    padding: 0 200px;
     width: 100%;
     border-bottom: 1px solid #eaeaea;
     height: 75px;
     display: flex;
     align-items: center;
     gap: 20px;
+    padding: 0 200px;
 `;
 
 export const Container = styled.div`
