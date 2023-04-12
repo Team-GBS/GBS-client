@@ -5,5 +5,4 @@ export const ProfileTemplates = styled.div`
   height: calc(100vh - 75px);
   display: flex;
   flex-direction: column;
-  overflow: auto;
 `;
