@@ -9,6 +9,7 @@ const ProfileTable = () => {
   const [menuState, setMenuState] = useState(0);
   const menuList = ['도서 대여 목록', '북마크'];
   const [modalState, setModalState] = useState(false);
+  const marathonLink = 'https://bookmarathon.gen.go.kr/main/main.php';
 
   return (
     <S.TableWrapper>
@@ -18,18 +19,18 @@ const ProfileTable = () => {
         </S.ProfileImg>
         <S.InfoWrapper>
           <S.StuInfo>
-            <p className="Name">
+            <S.Name className="Name">
               손정민 <MenuIcon onClick={() => setModalState(!modalState)} />
               {modalState && (
                 <ProfileModal isClick={modalState} setState={setModalState} />
               )}
-            </p>
-            <p className="StuNum">3학년 1반 12번</p>
-            <p className="BookNum">도서 대출 수 : 32권</p>
+            </S.Name>
+            <S.StuNum className="StuNum">3학년 1반 12번</S.StuNum>
+            <S.BookNum className="BookNum">도서 대출 수 : 32권</S.BookNum>
           </S.StuInfo>
           <S.BookMarathon>
             <p>내 랭킹 : 1등</p>
-            <Link href={'https://bookmarathon.gen.go.kr/main/main.php'}>
+            <Link href={marathonLink}>
               <a target="_blank">
                 독서마라톤
                 <NewTabLIcon />

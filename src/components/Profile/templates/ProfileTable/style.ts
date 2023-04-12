@@ -32,27 +32,26 @@ export const StuInfo = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-
-  .Name {
-    font-size: 32px;
-    font-weight: 500;
-    display: flex;
-    align-items: center;
-    margin-bottom: -50px;
-    svg {
-      cursor: pointer;
-    }
-    position: relative;
+`;
+export const Name = styled.div`
+  font-size: 32px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  margin-bottom: -50px;
+  svg {
+    cursor: pointer;
   }
-  .StuNum {
-    font-size: 20px;
-    font-weight: 500;
-    color: #595959;
-  }
-  .BookNum {
-    font-size: 24px;
-    font-weight: 500;
-  }
+  position: relative;
+`;
+export const StuNum = styled.div`
+  font-size: 20px;
+  font-weight: 500;
+  color: #595959;
+`;
+export const BookNum = styled.div`
+  font-size: 24px;
+  font-weight: 500;
 `;
 
 export const BookMarathon = styled.div`
