@@ -1,7 +1,6 @@
 import styled from '@emotion/styled';
 
 export const TableWrapper = styled.div`
-  /* height: 100vh; */
   display: flex;
   flex-direction: column;
 `;
@@ -9,17 +8,27 @@ export const TableWrapper = styled.div`
 export const ProfileContent = styled.div`
   display: flex;
   justify-content: space-between;
+  align-items: center;
+`;
+
+export const ProfileImg = styled.div`
+  width: 300px;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+
+export const InfoWrapper = styled.div`
+  width: 53rem;
+  height: 170px;
+  display: flex;
+  justify-content: space-between;
   align-items: flex-end;
 `;
 
-export const LeftWrapper = styled.div`
-  display: flex;
-  /* align-items: center; */
-  gap: 160px;
-`;
-export const ProfileImg = styled.div``;
-
 export const StuInfo = styled.div`
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -33,6 +42,7 @@ export const StuInfo = styled.div`
     svg {
       cursor: pointer;
     }
+    position: relative;
   }
   .StuNum {
     font-size: 20px;
@@ -44,6 +54,7 @@ export const StuInfo = styled.div`
     font-weight: 500;
   }
 `;
+
 export const BookMarathon = styled.div`
   font-size: 16px;
   font-weight: 300;
@@ -62,10 +73,15 @@ export const BookMarathon = styled.div`
 
 export const MenuWrapper = styled.div`
   border-top: 2px solid #eaeaea;
+  display: flex;
+  gap: 70px;
+  margin: 70px 0;
 `;
 
 export const ListBtn = styled.div`
+  margin-top: 15px;
+  font-size: 28px;
+  font-weight: 700;
+  color: ${(props: { state: boolean }) => (props.state ? '#737373' : '#111')};
   cursor: pointer;
 `;
-
-export const ListWrapper = styled.div``;
