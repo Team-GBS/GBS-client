@@ -9,7 +9,7 @@ export const TableWrapper = styled.div`
 export const Header = styled.div`
   font-weight: 700;
   font-size: 28px;
-  border-bottom: 2px solid #eaeaea;
+  border-bottom: 1px solid #eaeaea;
   padding: 25px 0;
   margin-bottom: 50px;
 `;
