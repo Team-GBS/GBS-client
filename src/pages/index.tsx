@@ -1,3 +1,11 @@
-export default function Home() {
-  return <></>;
-}
+import Main from 'components/Main/templates';
+
+const HomePage = () => {
+  return (
+    <>
+      <Main />
+    </>
+  );
+};
+
+export default HomePage;
