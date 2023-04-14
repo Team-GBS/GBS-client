@@ -88,6 +88,9 @@ const style = css`
     border: 0;
     box-sizing: border-box;
     font-family: GmarketSans;
+    ::-webkit-scrollbar {
+      display: none; /* Chrome, Safari, Opera*/
+    }
   }
   input:focus,
   select:focus,
