@@ -1,12 +1,13 @@
+import Header from 'components/Common/Header';
 import { MainTemplates } from 'components/Common/templates/MainTemplates/style';
-import ProfileTable from 'components/Profile/organisms/ProfileTable';
+import ProfileTable from 'components/Profile/templates/ProfileTable';
 import { ProfileTemplates } from 'components/Profile/templates/ProfileTemplate/style';
 
 const ProfilePage = () => {
   return (
     <MainTemplates>
+      <Header />
       <ProfileTemplates>
-        {/* Header */}
         <ProfileTable />
       </ProfileTemplates>
     </MainTemplates>

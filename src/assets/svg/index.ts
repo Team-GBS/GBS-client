@@ -14,3 +14,4 @@ export { default as RightARrowIcon } from './RightArrowIcon';
 export { default as LeftBookIcon } from './LeftBookIcon';
 export { default as RightBookIcon } from './RightBookIcon';
 export { default as NoMark } from './NoMark';
+export { default as NoneBookIcon } from './NoneBookIcon';
