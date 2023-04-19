@@ -15,3 +15,5 @@ export { default as LeftBookIcon } from './LeftBookIcon';
 export { default as RightBookIcon } from './RightBookIcon';
 export { default as NoMark } from './NoMark';
 export { default as NoneBookIcon } from './NoneBookIcon';
+export { default as GauthIcon } from './GauthIcon';
+export { default as LoginIcon } from './LoginIcon';
