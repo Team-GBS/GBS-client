@@ -1,4 +1,5 @@
 import styled from '@emotion/styled';
+import { BookItemStyleProps } from 'types/Book';
 
 export const ItemWrapper = styled.div`
   display: flex;
@@ -10,9 +11,19 @@ export const ItemWrapper = styled.div`
 `;
 
 export const CoverWrapper = styled.div`
-  width: 190px;
-  height: 270px;
-  background-color: ${(props: { bookType: string }) => props.bookType};
+  width: ${(props: BookItemStyleProps) =>
+    props.state === 'new'
+      ? '232px'
+      : props.state === 'detail'
+      ? '345px'
+      : '190px'};
+  height: ${(props: BookItemStyleProps) =>
+    props.state === 'new'
+      ? '330px'
+      : props.state === 'detail'
+      ? '465px'
+      : '270px'};
+  background-color: ${(props: BookItemStyleProps) => props.bookType};
   display: flex;
   justify-content: center;
   align-items: center;
