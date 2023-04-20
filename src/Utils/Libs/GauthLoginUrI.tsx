@@ -1,0 +1,1 @@
+export const gauthLoginUri = `https://gauth.co.kr/login?client_id=${process.env.NEXT_PUBLIC_Client_ID}&redirect_uri=localhost:3000/Login`;

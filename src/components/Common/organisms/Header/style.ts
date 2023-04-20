@@ -29,6 +29,7 @@ export const Logo = styled.div`
   display: flex;
   align-items: center;
   gap: 7px;
+  cursor: pointer;
 `;
 
 export const GBSLogo = styled.div`

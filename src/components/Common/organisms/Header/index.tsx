@@ -9,15 +9,17 @@ import {
 } from 'assets/svg';
 import * as S from './style';
 import { useState } from 'react';
+import { useRouter } from 'next/router';
 
 const Header = () => {
   const [toggle, setToggle] = useState<boolean>(false);
+  const router = useRouter();
 
   return (
     <>
       <S.Wrap>
         <S.Line />
-        <S.Logo>
+        <S.Logo onClick={() => {router.push('/')}}>
           <Logo />
           <S.GBSLogo>GBS</S.GBSLogo>
         </S.Logo>
