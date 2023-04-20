@@ -1,12 +1,12 @@
 import { useRecoilState } from 'recoil';
 import * as S from './style';
-import { ShowModalAtom } from 'components/Main/atoms/state';
+import { ShowModalAtom } from 'recoilAtoms/recoilAtomContainer';
 import { useEffect, useRef, useState } from 'react';
-import BookBox from 'components/Main/atoms/BookBox';
 import { LeftBookIcon, NoMark, RightBookIcon } from 'assets/svg';
 import Mark from 'assets/svg/Mark';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import BookListItem from 'components/Common/atoms/BookListItem';
 
 const BookModal = () => {
   const [showModal, setShowModal] = useRecoilState(ShowModalAtom);
@@ -14,12 +14,6 @@ const BookModal = () => {
   const [canRent, setCanRent] = useState<boolean>(true);
   const outModal = useRef(null);
   const inModal = useRef(null);
-  const [color, setColor] = useState({
-    red: '#FFF5F5',
-    yellow: '#FEFFF5',
-    skyblue: '#F5FBFF',
-    pink: '#FFF5FF',
-  });
 
   useEffect(() => {
     showModal
@@ -48,7 +42,7 @@ const BookModal = () => {
         display={showModal ? 'flex' : 'none'}
       >
         <S.Modal ref={inModal}>
-          <BookBox backgroundColor={color.skyblue} width="50rem" />
+          <BookListItem bookType={'500'} state={'detail'} />
           <S.BookInfo>
             <S.BookExplain>
               <S.BookTitle>[과학] 세상의 모든 과학</S.BookTitle>
