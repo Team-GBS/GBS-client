@@ -1,13 +1,16 @@
-import { useState } from 'react';
 import * as S from './style';
 import { BookItemProps } from 'types/Book';
 import { getBookColor } from 'Utils/Libs/getBookColor';
 import { NoneBookIcon } from 'assets/svg';
+import { useRecoilState } from 'recoil';
+import { ShowModalAtom } from 'recoilAtoms/recoilAtomContainer';
 
-const BookListItem = ({ title, bookType, cover }: BookItemProps) => {
+const BookListItem = ({ title, bookType, cover, state }: BookItemProps) => {
+  const [showModal, setShowModal] = useRecoilState(ShowModalAtom);
+
   return (
-    <S.ItemWrapper>
-      <S.CoverWrapper bookType={getBookColor[bookType]}>
+    <S.ItemWrapper onClick={() => setShowModal(!showModal)}>
+      <S.CoverWrapper bookType={getBookColor[bookType]} state={state}>
         {cover ? <></> : <NoneBookIcon />}
       </S.CoverWrapper>
       <S.Title>{title}</S.Title>

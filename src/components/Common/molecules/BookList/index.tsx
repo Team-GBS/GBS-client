@@ -1,7 +1,7 @@
 import * as S from './style';
 import BookListItem from 'components/Common/atoms/BookListItem';
 
-const BookList = () => {
+const CommoneBookList = () => {
   return (
     <S.ListWrapper>
       {[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1].map((i, idx) => (
@@ -11,4 +11,4 @@ const BookList = () => {
   );
 };
 
-export default BookList;
+export default CommoneBookList;

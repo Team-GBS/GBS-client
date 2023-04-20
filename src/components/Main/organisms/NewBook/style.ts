@@ -15,14 +15,21 @@ export const TitleText = styled.div`
 
 export const Container = styled.div`
   display: flex;
-  gap: 60px;
+  gap: 14px;
+  overflow-x: auto;
+`;
+
+export const BookInfoWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
 `;
 
 export const BookInfo = styled.div`
-  width: 21.9rem;
+  width: 400px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   gap: 20px;
 `;
 
@@ -46,14 +53,26 @@ export const BookExplain = styled.p`
   font-weight: 500;
 `;
 
+export const EBookList = styled.div`
+  display: flex;
+  gap: 60px;
+`;
+
 export const LeftArrow = styled.div`
-    position: absolute;
-    top: 50%;
-    left: -50px;
+  position: absolute;
+  top: 50%;
+  left: -50px;
 `;
 
 export const RightArrow = styled.div`
-    position: absolute;
-    top: 50%;
-    right: -50px;
+  position: absolute;
+  top: 50%;
+  right: -50px;
+`;
+
+export const Arrow = styled.div`
+  position: absolute;
+  top: 50%;
+  ${(props: { state: boolean }) =>
+    props.state ? 'left: -50px' : 'right: -50px'}
 `;
