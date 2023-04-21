@@ -15,8 +15,8 @@ export const TitleText = styled.div`
 
 export const Container = styled.div`
   display: flex;
-  gap: 14px;
-  overflow-x: auto;
+  gap: 60px;
+  overflow: hidden;
 `;
 
 export const BookInfoWrapper = styled.div`
@@ -27,10 +27,15 @@ export const BookInfoWrapper = styled.div`
 `;
 
 export const BookInfo = styled.div`
-  width: 400px;
+  min-width: 255px;
+  background-color: white;
+  height: 330px;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   gap: 20px;
+  z-index: 1;
+
 `;
 
 export const BookTitle = styled.div`
@@ -75,4 +80,5 @@ export const Arrow = styled.div`
   top: 50%;
   ${(props: { state: boolean }) =>
     props.state ? 'left: -50px' : 'right: -50px'}
+
 `;
