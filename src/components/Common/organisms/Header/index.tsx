@@ -26,8 +26,8 @@ const Header = () => {
         <S.Container>
           <SearchIcon />
           <AlermIcon />
-          <ProfileIcon />
-          <ApplyIcon />
+          <ProfileIcon onClick={() => {router.push("/profile")}} />
+          <ApplyIcon onClick={() => {router.push("/application")}} />
           <S.ModeSwitch
             onClick={() => {
               setToggle(!toggle);
