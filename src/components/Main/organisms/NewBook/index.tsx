@@ -1,15 +1,16 @@
 import { RightARrowIcon } from 'assets/svg';
 import * as S from './style';
 import LeftArrowIcon from 'assets/svg/LeftArrowIcon';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import BookListItem from 'components/Common/atoms/BookListItem';
 
 const NewBook = () => {
-  const [color, setColor] = useState({
-    red: '#FFF5F5',
-    yellow: '#FEFFF5',
-    skyblue: '#F5FBFF',
-  });
+  const [position, setPosition] = useState(0);
+  const newbooks = [100, 200, 300, 400, 500];
+
+  useEffect(() => {
+    console.log(position);
+  }, [position]);
 
   return (
     <>
@@ -18,6 +19,7 @@ const NewBook = () => {
         <S.Container>
           <S.BookInfoWrapper>
             <BookListItem
+              translateX={`-${position * 315}px`}
               title={'세상의 모든 과학'}
               bookType={'900'}
               state={'new'}
@@ -33,32 +35,34 @@ const NewBook = () => {
             </S.BookInfo>
           </S.BookInfoWrapper>
           <S.EBookList>
-            <BookListItem
-              title={'세상의 모든 과학'}
-              bookType={'500'}
-              state={'new'}
-            />
-            <BookListItem
-              title={'세상의 모든 과학'}
-              bookType={'500'}
-              state={'new'}
-            />
-            <BookListItem
-              title={'세상의 모든 과학'}
-              bookType={'500'}
-              state={'new'}
-            />
-            <BookListItem
-              title={'세상의 모든 과학'}
-              bookType={'500'}
-              state={'new'}
-            />
+            {newbooks.map((newbook, idx) => (
+              <BookListItem
+                key={newbook}
+                translateX={
+                  position >= idx + 1
+                    ? `-${position * 315 + 315}px`
+                    : `-${position * 315}px`
+                }
+                bookType={String(newbook)}
+                state={'new'}
+              />
+            ))}
           </S.EBookList>
         </S.Container>
-        <S.Arrow state={true}>
+        <S.Arrow
+          state={true}
+          onClick={() => {
+            setPosition(position - 1);
+          }}
+        >
           <LeftArrowIcon />
         </S.Arrow>
-        <S.Arrow state={false}>
+        <S.Arrow
+          state={false}
+          onClick={() => {
+            setPosition(position + 1);
+          }}
+        >
           <RightARrowIcon />
         </S.Arrow>
       </S.Wrap>
