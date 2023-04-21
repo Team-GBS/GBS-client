@@ -1,8 +1,8 @@
 import Header from 'components/Common/organisms/Header';
 import * as S from './style';
 import NewBook from 'components/Main/organisms/NewBook';
-import BookList from '../organisms/BookList';
 import BookModal from '../organisms/BookModal';
+import BookList from 'components/Common/molecules/BookList';
 
 const Main = () => {
   return (
@@ -11,6 +11,7 @@ const Main = () => {
       <S.HomeTemplate>
         <Header />
         <NewBook />
+        <S.BooklistTitle>도서목록</S.BooklistTitle>
         <BookList />
       </S.HomeTemplate>
     </>
