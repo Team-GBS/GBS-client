@@ -10,6 +10,7 @@ import {
 import * as S from './style';
 import { useState } from 'react';
 import { useRouter } from 'next/router';
+import Link from 'next/link';
 
 const Header = () => {
   const [toggle, setToggle] = useState<boolean>(false);
@@ -26,8 +27,8 @@ const Header = () => {
         <S.Container>
           <SearchIcon />
           <AlermIcon />
-          <ProfileIcon />
-          <ApplyIcon />
+          <ProfileIcon onClick={() => {router.push('/profile')}} />
+          <ApplyIcon onClick={() => {router.push('/application')}} />
           <S.ModeSwitch
             onClick={() => {
               setToggle(!toggle);
