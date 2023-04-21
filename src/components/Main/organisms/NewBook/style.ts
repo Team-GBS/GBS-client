@@ -26,6 +26,7 @@ export const BookInfo = styled.div`
   flex-direction: column;
   justify-content: center;
   gap: 20px;
+  z-index: 1;
 `;
 
 export const BookTitle = styled.div`
