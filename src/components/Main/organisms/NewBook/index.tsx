@@ -1,22 +1,28 @@
 import { BookIcon, Logo, RightARrowIcon } from 'assets/svg';
 import * as S from './style';
 import LeftArrowIcon from 'assets/svg/LeftArrowIcon';
-import BookBox from 'components/Main/atoms/BookBox';
-import { useState } from 'react';
+import BookListItem from 'components/Common/atoms/BookListItem';
+import { useEffect, useRef, useState } from 'react';
 
 const NewBook = () => {
-  const [color, setColor] = useState({
-    red: '#FFF5F5',
-    yellow: '#FEFFF5',
-    skyblue: '#F5FBFF',
-  });
+  const [position, setPosition] = useState(0);
+  const newbooks = [100, 200, 300, 400, 500];
+
+  useEffect(() => {
+    console.log(position);
+  }, [position]);
 
   return (
     <>
       <S.Wrap>
         <S.TitleText>신간 도서</S.TitleText>
         <S.Container>
-          <BookBox backgroundColor={color.red} height='20.5rem' width='16.9rem' />
+          <BookListItem
+            translateX={`-${position * 315}px`}
+            bookType="700"
+            height="330px"
+            width="255px"
+          />
           <S.BookInfo>
             <S.BookTitle>[과학] 세상의 모든 과학</S.BookTitle>
             <S.BookAuthor>Chun-ho-Yi</S.BookAuthor>
@@ -26,13 +32,34 @@ const NewBook = () => {
               과빛밤 지기의 친절한 빅 히스토리 과학 여행서
             </S.BookExplain>
           </S.BookInfo>
-          <BookBox backgroundColor={color.yellow} height='20.5rem' width='16.9rem' />
-          <BookBox backgroundColor={color.skyblue} height='20.5rem' width='16.9rem' />
+          {newbooks.map((newbook, idx) => (
+            <BookListItem
+              key={newbook}
+              translateX={
+                position >= idx + 1
+                  ? `-${position * 315 + 315}px`
+                  : `-${position * 315}px`
+              }
+              bookType={String(newbook)}
+              height="330px"
+              width="255px"
+            />
+          ))}
         </S.Container>
-        <S.LeftArrow>
+        <S.LeftArrow
+          onClick={() => {
+            setPosition(position - 1);
+          }}
+          visibility={position === 0 ? 'hidden' : 'visible'}
+        >
           <LeftArrowIcon />
         </S.LeftArrow>
-        <S.RightArrow>
+        <S.RightArrow
+          onClick={() => {
+            setPosition(position + 1);
+          }}
+          visibility={position === newbooks.length - 2 ? 'hidden' : 'visible'}
+        >
           <RightARrowIcon />
         </S.RightArrow>
       </S.Wrap>

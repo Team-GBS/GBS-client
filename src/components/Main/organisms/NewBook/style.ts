@@ -16,10 +16,12 @@ export const TitleText = styled.div`
 export const Container = styled.div`
   display: flex;
   gap: 60px;
+  overflow: hidden;
 `;
 
 export const BookInfo = styled.div`
-  width: 21.9rem;
+  min-width: 255px;
+  height: 330px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -46,14 +48,16 @@ export const BookExplain = styled.p`
   font-weight: 500;
 `;
 
-export const LeftArrow = styled.div`
+export const LeftArrow = styled.div<{visibility: string}>`
     position: absolute;
     top: 50%;
     left: -50px;
+    visibility: ${(props) => props.visibility};
 `;
 
-export const RightArrow = styled.div`
+export const RightArrow = styled.div<{visibility: string}>`
     position: absolute;
     top: 50%;
     right: -50px;
+    visibility: ${(props) => props.visibility};
 `;
