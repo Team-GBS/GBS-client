@@ -6,7 +6,7 @@ export const ItemWrapper = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 10px;
+  gap: 15px;
   cursor: pointer;
 `;
 
