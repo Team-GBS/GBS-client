@@ -44,6 +44,7 @@ const NewBook = () => {
                     : `-${position * 315}px`
                 }
                 bookType={String(newbook)}
+                title={'세상의 모든 과학'}
                 state={'new'}
               />
             ))}

@@ -22,12 +22,11 @@ export const Container = styled.div`
 export const BookInfoWrapper = styled.div`
   display: flex;
   justify-content: center;
-  align-items: center;
-  gap: 30px;
+  gap: 60px;
 `;
 
 export const BookInfo = styled.div`
-  min-width: 255px;
+  width: 255px;
   background-color: white;
   height: 330px;
   display: flex;
