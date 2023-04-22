@@ -3,6 +3,7 @@ export interface BookItemProps {
   bookType: string;
   cover?: string;
   state?: string;
+  translateX?: string;
 }
 
 export interface BookItemStyleProps {
