@@ -1,16 +1,12 @@
 import { RightARrowIcon } from 'assets/svg';
 import * as S from './style';
 import LeftArrowIcon from 'assets/svg/LeftArrowIcon';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import BookListItem from 'components/Common/atoms/BookListItem';
 
 const NewBook = () => {
   const [position, setPosition] = useState(0);
   const newbooks = [100, 200, 300, 400, 500];
-
-  useEffect(() => {
-    console.log(position);
-  }, [position]);
 
   return (
     <>
