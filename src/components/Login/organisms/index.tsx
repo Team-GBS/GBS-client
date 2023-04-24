@@ -1,10 +1,10 @@
 import { LoginIcon, Logo } from 'assets/svg';
 import * as S from './style';
 import GauthIcon from 'assets/svg/GauthIcon';
-import { useRouter } from 'next/router';
+import { useRouter } from 'next/dist/client/router';
 import { gauthLoginUri } from 'Utils/Libs/GauthLoginUrI';
 
-const LoginPage = () => {
+const Login = () => {
   const router = useRouter();
   const LoginClick = () => {
     router.push(gauthLoginUri);
@@ -24,4 +24,4 @@ const LoginPage = () => {
   );
 };
 
-export default LoginPage;
+export default Login;
