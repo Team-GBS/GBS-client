@@ -1,14 +1,14 @@
-import LoginPage from 'components/Login/organisms';
+import Login from 'components/Login/organisms';
 import { LoginTemplate } from 'components/Login/templates/style';
 
-const Login = () => {
+const LoginPage = () => {
   return (
     <>
       <LoginTemplate>
-        <LoginPage />
+        <Login />
       </LoginTemplate>
     </>
   );
 };
 
-export default Login;
+export default LoginPage;
