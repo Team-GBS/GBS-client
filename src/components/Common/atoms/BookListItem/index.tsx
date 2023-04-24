@@ -9,8 +9,8 @@ const BookListItem = ({ title, bookType, cover, state, translateX }: BookItemPro
   const [showModal, setShowModal] = useRecoilState(ShowModalAtom);
 
   return (
-    <S.ItemWrapper onClick={() => setShowModal(!showModal)}>
-      <S.CoverWrapper bookType={getBookColor[bookType]} state={state} translateX={translateX}>
+    <S.ItemWrapper onClick={() => setShowModal(!showModal)} translateX={translateX} bookType=''>
+      <S.CoverWrapper bookType={getBookColor[bookType]} state={state}>
         {cover ? <></> : <NoneBookIcon />}
       </S.CoverWrapper>
       <S.Title>{title}</S.Title>
