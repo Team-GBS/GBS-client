@@ -30,18 +30,17 @@ const ProfileTable = () => {
           </S.StuInfo>
           <S.BookMarathon>
             <p>내 랭킹 : 1등</p>
-            <Link href={marathonLink}>
-              <a target="_blank">
-                독서마라톤
-                <NewTabLIcon />
-              </a>
-            </Link>
+            <a href={marathonLink} target="_blank" rel="noreferrer">
+              독서마라톤
+              <NewTabLIcon />
+            </a>
           </S.BookMarathon>
         </S.InfoWrapper>
       </S.ProfileContent>
       <S.MenuWrapper>
         {menuList.map((i, idx) => (
           <S.ListBtn
+            key={idx}
             state={!(menuState === idx)}
             onClick={() => setMenuState(idx)}
           >
