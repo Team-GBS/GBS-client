@@ -8,6 +8,8 @@ export const ItemWrapper = styled.div`
   align-items: center;
   gap: 15px;
   cursor: pointer;
+  transition-duration: 0.3s;
+  transform: translateX(${(props: BookItemProps) => props.translateX});
 `;
 
 export const CoverWrapper = styled.div`
@@ -24,8 +26,6 @@ export const CoverWrapper = styled.div`
       ? '465px'
       : '270px'};
   background-color: ${(props: BookItemStyleProps) => props.bookType};
-  transform: translateX(${(props: BookItemProps) => props.translateX});
-  transition-duration: 0.3s;
   display: flex;
   justify-content: center;
   align-items: center;

@@ -1,7 +1,7 @@
 import { RightARrowIcon } from 'assets/svg';
 import * as S from './style';
 import LeftArrowIcon from 'assets/svg/LeftArrowIcon';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import BookListItem from 'components/Common/atoms/BookListItem';
 
 const NewBook = () => {
@@ -49,7 +49,7 @@ const NewBook = () => {
         <S.Arrow
           state={true}
           onClick={() => {
-            setPosition(position - 1);
+            setPosition(position - 1 < 0 ? newbooks.length - 2 : position - 1);
           }}
         >
           <LeftArrowIcon />
@@ -57,7 +57,7 @@ const NewBook = () => {
         <S.Arrow
           state={false}
           onClick={() => {
-            setPosition(position + 1);
+            setPosition(position + 1 > newbooks.length - 2 ? 0 : position + 1);
           }}
         >
           <RightARrowIcon />
