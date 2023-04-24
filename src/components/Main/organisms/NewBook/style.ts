@@ -27,7 +27,6 @@ export const BookInfoWrapper = styled.div`
 
 export const BookInfo = styled.div`
   width: 255px;
-  background-color: white;
   height: 330px;
   display: flex;
   flex-direction: column;
@@ -79,5 +78,4 @@ export const Arrow = styled.div`
   top: 50%;
   ${(props: { state: boolean }) =>
     props.state ? 'left: -50px' : 'right: -50px'}
-
 `;
