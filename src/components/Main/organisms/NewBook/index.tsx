@@ -6,7 +6,7 @@ import BookListItem from 'components/Common/atoms/BookListItem';
 
 const NewBook = () => {
   const [position, setPosition] = useState(0);
-  const newbooks = [100, 200, 300, 400, 500];
+  const newbooks = [100, 200, 600, 400, 500];
 
   return (
     <>
