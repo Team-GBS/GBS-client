@@ -1,6 +1,6 @@
 import { useRecoilState } from 'recoil';
 import * as S from './style';
-import { ShowModalAtom } from 'recoilAtoms/recoilAtomContainer';
+import { ShowModalAtom, ThisBookColorAtom } from 'recoilAtoms/recoilAtomContainer';
 import { useEffect, useRef, useState } from 'react';
 import { LeftBookIcon, NoMark, RightBookIcon } from 'assets/svg';
 import Mark from 'assets/svg/Mark';
@@ -10,6 +10,7 @@ import BookListItem from 'components/Common/atoms/BookListItem';
 
 const BookModal = () => {
   const [showModal, setShowModal] = useRecoilState(ShowModalAtom);
+  const [thisBookColor, setThisBookColor] = useRecoilState(ThisBookColorAtom);
   const [bookMark, setBookMark] = useState<boolean>(false);
   const [canRent, setCanRent] = useState<boolean>(true);
   const outModal = useRef(null);
@@ -42,7 +43,7 @@ const BookModal = () => {
         display={showModal ? 'flex' : 'none'}
       >
         <S.Modal ref={inModal}>
-          <BookListItem bookType={'500'} state={'detail'} />
+          <BookListItem bookType={thisBookColor} state={'detail'} />
           <S.BookInfo>
             <S.BookExplain>
               <S.BookTitle>[과학] 세상의 모든 과학</S.BookTitle>
